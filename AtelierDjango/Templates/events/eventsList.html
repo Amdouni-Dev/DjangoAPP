@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+{% comment %} <h1>Liste des evenement dynamiquement</h1>
+<ul>
+{% for e in events %}
+<a href="{% url 'EventDetailClass' e.id %}" > {{e.title}}</a>
+
+
+<img src="{{e.image.url}}" />
+{% endfor %} {% endcomment %}
+{% comment %} </ul> {% endcomment %}
+<h1>Liste des evenement dynamiquement</h1>
+
+<table>
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Description</th>
+        <th>Image</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for e in events %}
+        <tr>
+          <td>{{ e.title }}</td>
+          <td>{{ e.description }}</td>
+          <td><img src="{{ e.image.url }}" alt="{{ e.title }}" width="20px" height="20px"></td>
+          <td>
+            <a href="{% url 'ModelUpdateView' e.id%} " >Modifier</a>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  
+
+
+{% endblock %}
