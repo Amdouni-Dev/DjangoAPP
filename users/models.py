@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+<<<<<<< HEAD
 from django.core.exceptions import ValidationError
 from django.core.validators import *
 from django.utils.html import format_html
@@ -34,3 +35,12 @@ class Person(AbstractUser):
 
     
     
+=======
+# Create your models here.
+
+class Person(AbstractUser):
+    cin=models.CharField(primary_key=True, max_length=255)
+    email=models.EmailField(unique=True)
+    username=models.CharField(max_length=10,unique=True)
+    USERNAME_FIELD='username'
+>>>>>>> 6a021e69174838032b64d50400a85523401b98bd

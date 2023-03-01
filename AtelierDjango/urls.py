@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 """startdjango URL Configuration
+=======
+"""AtelierDjango URL Configuration
+>>>>>>> 6a021e69174838032b64d50400a85523401b98bd
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
@@ -14,6 +18,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+<<<<<<< HEAD
 from django.urls import path,include
 from django.conf.urls.static import static
 from django.conf import settings
@@ -26,3 +31,10 @@ urlpatterns = [
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,
                           document_root=settings.MEDIA_ROOT)
+=======
+from django.urls import path
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+]
+>>>>>>> 6a021e69174838032b64d50400a85523401b98bd

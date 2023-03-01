@@ -1,4 +1,5 @@
 from django.contrib import admin
+<<<<<<< HEAD
 from events.models import Event # wila hakka from .models import Event khter deja f west l dosier events
 from events.models import Participation
 from datetime import datetime;
@@ -60,3 +61,7 @@ class participationAdmin(admin.ModelAdmin):
 
 
 #Personnalistaion
+=======
+
+# Register your models here.
+>>>>>>> 6a021e69174838032b64d50400a85523401b98bd

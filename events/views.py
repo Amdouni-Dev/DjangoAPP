@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from django.views.generic import *
@@ -90,5 +91,8 @@ class ModelUpdateView(UpdateView):
 
 
 
+=======
+from django.shortcuts import render
+>>>>>>> 6a021e69174838032b64d50400a85523401b98bd
 
 # Create your views here.
