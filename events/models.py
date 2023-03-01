@@ -37,9 +37,12 @@ class Event(models.Model): # heritage ==> models.Model
     #related name==> esm l objet 
     # Meta predefine deja
     def __str__(self):
+        # todhherli ki nekli aala add:fou9 l formulaire 
         return f'{self.title} and {self.state}' # naamel affichage l hajtyn fel input 
         #return self.title 
     class Meta:
+        verbose_name='Details des evenements'
+
         constraints=[models.CheckConstraint(check=models.Q(dateEvent__gte=datetime.now()), # pour les operations logiques =>  OU,XOR,OR,&&
                                             name="la date est  invalide")]
     
@@ -49,6 +52,7 @@ class Participation(models.Model):
     event=models.ForeignKey(Event,on_delete=models.CASCADE) 
   
     class Meta:
+        verbose_name="Details Participation"
         unique_together=('person','event')  # lezem ykoun les clés unique khater ynajem yparticpi mara khw    
             
             
