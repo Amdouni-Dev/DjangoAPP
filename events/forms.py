@@ -10,6 +10,7 @@ class EventForm(forms.Form):
         attrs={'type':'date'}
     ) )
     organizer=forms.ModelChoiceField(queryset=Person.objects.all(),label="Choisir un organizer")
+
     
 class EventModelForm(forms.ModelForm):
     class Meta:
@@ -22,4 +23,17 @@ class EventModelForm(forms.ModelForm):
                 'type': 'date',
                 'class': 'form-control  date-input'}))    
                           
-    organizer=forms.ModelChoiceField(queryset=Person.objects.all(),label="Choisir un organizer")                     
+    organizer=forms.ModelChoiceField(queryset=Person.objects.all(),label="Choisir un organizer")
+    
+                       
+class DeleteEventForm(forms.ModelForm):
+    class Meta:
+        model = Event
+        fields = []
+
+
+class EventModelFormPArticipation(forms.ModelForm):
+    class Meta:
+        model=Event
+        fields=['participations']
+        #exclude=('state',)       

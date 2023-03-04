@@ -31,15 +31,23 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'bootstrap_modal_forms',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'events',
     'users',
-    'events'
+  
+    'bootstrap4',
+
+    
 ]
+
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -56,11 +64,7 @@ ROOT_URLCONF = 'AtelierDjango.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-<<<<<<< HEAD
         'DIRS': [BASE_DIR/'AtelierDjango/Templates'],
-=======
-        'DIRS': [],
->>>>>>> 6a021e69174838032b64d50400a85523401b98bd
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -122,10 +126,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-<<<<<<< HEAD
 STATICFILES_DIRS = [BASE_DIR /'static/']
-=======
->>>>>>> 6a021e69174838032b64d50400a85523401b98bd
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

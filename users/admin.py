@@ -1,5 +1,4 @@
 from django.contrib import admin
-<<<<<<< HEAD
 from .models import Person # wila hakka from .models import Event khter deja f west l dosier events
 from django.utils.html import mark_safe
 from django.utils.html import format_html
@@ -37,7 +36,5 @@ class PersonAdmin(admin.ModelAdmin):
     # def profile_pic(self, obj):
     #     return mark_safe(f'<img src="/media/{obj.image}"width="150" height="150" />')
 
-=======
->>>>>>> 6a021e69174838032b64d50400a85523401b98bd
 
 # Register your models here.
