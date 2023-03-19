@@ -11,8 +11,13 @@ urlpatterns = [
     path('IncrementNbParticipants/<int:id>',IncrementNbParticipants,name='IncrementNbParticipants'),
     path('IncrementNbParticipation/<int:id>',IncrementNbParticipation,name='IncrementNbParticipation'),
     path('supprimer_participation/<int:id>/supprimer_participation/', supprimer_participation, name='supprimer_participation'),
-
-
+    path('participate/<int:event_id>',participate,name="participate"),
+    path('listeventsView/' ,EventListClass.as_view() ,name='event_list_view'),
+    path('detailsEvent/<int:pk>' ,EventDetail.as_view() ,name='event_details_view'),
+    path('deleteView/<int:pk>', EventDeleteView.as_view(),
+         name="Events_Delete_View"),
+    path('create_event_view',CreateEvent.as_view(),name="create_event_view"),
+    path('update_event_view/<int:pk>',UpdateEvent.as_view(),name="update_event_view"),
     
     # class
     path('eventLisClass',EventListClass.as_view(),name="eventLisClass"),

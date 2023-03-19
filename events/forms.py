@@ -10,7 +10,7 @@ class EventForm(forms.Form):
         attrs={'type':'date'}
     ) )
     organizer=forms.ModelChoiceField(queryset=Person.objects.all(),label="Choisir un organizer")
-
+    category=forms.ChoiceField(choices=Event.categories,     widget=forms.RadioSelect())
     
 class EventModelForm(forms.ModelForm):
     class Meta:
@@ -37,3 +37,4 @@ class EventModelFormPArticipation(forms.ModelForm):
         model=Event
         fields=['participations']
         #exclude=('state',)       
+        

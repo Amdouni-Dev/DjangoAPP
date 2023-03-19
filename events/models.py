@@ -23,7 +23,9 @@ class Event(models.Model): # heritage ==> models.Model
     title= models.CharField(max_length=255,validators=[TitleValid]) # maxLength est obligatoire 
    # title= models.CharField(max_length=255) # maxLength est obligatoire 
     description=models.TextField() # nafsha chartfield ema akber 
-    image=models.ImageField(upload_to='images/')  # /Media/Images 
+    #image=models.ImageField(upload_to='images/')  # /Media/Images 
+    image=models.CharField(max_length=255) 
+
     category=models.CharField(max_length=255,choices=categories)
     state=models.BooleanField(default=False)
     nbrParticipants=models.IntegerField(default=0,validators=[MinValueValidator(limit_value=0,message="la valeur doit etre positif ")])
